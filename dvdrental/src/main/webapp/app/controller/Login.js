@@ -6,6 +6,9 @@ Ext.define('Sanjay.controller.Login', { // #1
 	          'Header',
 	          'MyViewPort'
 	],
+	requires:[
+	          'Sanjay.util.Util'
+	          ],
 	init : function(application) { // #4 
 		this.control({ // #5 
 			"login form button#submit":{
@@ -42,32 +45,17 @@ Ext.define('Sanjay.controller.Login', { // #1
 				},
 				failure: function(conn,response,options, eOpts){
 					Ext.get(login.getEl()).unmask();
-					Ext.Msg.show({
-						title: 'Error!',
-						msg: conn.responseText,
-						icon: Ext.Msg.ERROR,
-						buttons: Ext.Msg.OK
-					});
+					Sanjay.util.Util.showErrorMsg(conn.responseText);
 				},
 				success: function(conn,response,options, eOpts){
 					Ext.get(login.getEl()).unmask();
 					console.log(conn);
-					var result=Ext.JSON.decode(conn.responseText, true);
-					if(!result){
-						result={};
-						result.success=false;
-						result.msg=conn.responseText;
-					}
+					var result= Sanjay.util.Util.decodeJSON(conn.responseText);
 					if(result.success){
 						login.close();
 						Ext.create('Sanjay.view.MyViewPort');
 					}else{
-						Ext.Msg.show({
-							title: 'Fail!',
-							msg: result.msg,
-							icon: Ext.Msg.ERROR,
-							buttons: Ext.Msg.OK
-						});
+						Sanjay.util.Util.showErrorMsg(conn.responseText);
 					}
 				}
 			});
@@ -110,32 +98,17 @@ Ext.define('Sanjay.controller.Login', { // #1
 		Ext.Ajax.request({
 			url: 'auth/logout',
 			success: function(conn, response, options, eOpts){
-				var result = Ext.JSON.decode(conn.responseText, true); 
-				if (!result){ 
-					result = {}; 
-					result.success = false; 
-					result.msg = conn.responseText; 
-				}
+				var result = Sanjay.util.Util.decodeJSON(conn.responseText);
 				if (result.success) { // #3 
 					button.up('mainviewport').destroy(); // #4 
 					window.location.reload(); // #5 
 				} else { 
-					Ext.Msg.show({ // #6 
-						title:'Error!', 
-						msg: result.msg, 
-						icon: Ext.Msg.ERROR, 
-						buttons: Ext.Msg.OK 
-						}); 
+					Sanjay.util.Util.showErrorMsg(conn.responseText);
 				}
 				
 			},
 			failure: function(conn, response, options, eOpts){
-				Ext.Msg.show({ // #7 
-					title: 'Error!', 
-					msg: conn.responseText, 
-					icon: Ext.Msg.ERROR, 
-					buttons: Ext.Msg.OK 
-					});
+				Sanjay.util.Util.showErrorMsg(conn.responseText);
 			}
 		});
 	}    
