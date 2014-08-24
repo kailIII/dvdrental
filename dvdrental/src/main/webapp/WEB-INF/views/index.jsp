@@ -8,7 +8,6 @@
 
 		<link rel="stylesheet" href="resources/css/app.css">
         <script type ="text/javascript" src="app/app.js"></script>
-<!--     <script type ="text/javascript" src="app/view/Login.js"></script>  -->    
     </head>
     <body></body>
 </html>

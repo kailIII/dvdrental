@@ -23,3 +23,17 @@
 	margin-bottom: 15px;
 	height: 100px;
 }
+.capslock{ 
+	background:url('../icons/warn.png') no-repeat center left; 
+	padding: 2px; 
+	padding-left: 20px; 
+	font-weight: 700; 
+	}
+
+#titleHeader { 
+	color:# 000; 
+	font-size: 20px; 
+	font-weight:bold; 
+	font-family:' Lucida Grande', Arial, Sans; 
+	}
+

@@ -1,17 +1,19 @@
+
 Ext.application({
+	
     name   : 'Sanjay',
 
     launch : function() {
 
-     
-      var task = new Ext.util.DelayedTask(function(){
+    	Ext.tip.QuickTipManager.init();
+    	var task = new Ext.util.DelayedTask(function(){
     	  splashscreen.fadeOut({
-    		  duration: 1000,
+    		  duration: 500,
     		  remove:true
     	  });
     	
     	  splashscreen.next().fadeOut({
-    		  duration: 1000,
+    		  duration: 500,
     		  remove:true,
     		  listeners: { 
     			  afteranimate: function( el, startTime, eOpts ){ 
@@ -21,7 +23,7 @@ Ext.application({
     	  });
     	  console.log("Launch");
       });
-      task.delay(2000);
+      task.delay(1000);
       
 
     },
@@ -32,14 +34,7 @@ Ext.application({
     		cls: 'x-splash-icon'
     	});
     },
-    /*
-    requires: [
-               'Sanjay.view.Login'
-               ],
-    views: [
-            'Login'
-            ], 
-            */
+
 	controllers: [
 		'Login'
 	],

@@ -35,6 +35,8 @@ Ext.define('Sanjay.view.Login', { // #1
 		        	        inputType: 'password',
 		        	        name: 'password',
 		        	        fieldLabel: "Password",
+		        	        enableKeyEvents: true,
+		        	        id: 'password',
 		        	        maxLength: 15
 	        	        }
 	        	        ],

@@ -1,5 +1,29 @@
 package com.sanjay.dvdrental.web;
 
-public final class LoginController {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.sanjay.dvdrental.model.LoginResult;
+
+@RestController
+@RequestMapping(value="/auth")
+public final class LoginController {
+	Logger logger = LoggerFactory.getLogger(LoginController.class);
+	@RequestMapping(value="/login")
+	public LoginResult login(@RequestParam String user, @RequestParam String password){
+		logger.info("User: "+user,"password: "+password);
+		LoginResult result =  new LoginResult();
+		result.setSuccess(true);
+		result.setMsg("all set");
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
 }
