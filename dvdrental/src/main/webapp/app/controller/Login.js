@@ -7,7 +7,8 @@ Ext.define('Sanjay.controller.Login', { // #1
 	          'MyViewPort'
 	],
 	requires:[
-	          'Sanjay.util.Util'
+	          'Sanjay.util.Util',
+	          'Sanjay.util.SessionMonitor'
 	          ],
 	init : function(application) { // #4 
 		this.control({ // #5 
@@ -54,6 +55,7 @@ Ext.define('Sanjay.controller.Login', { // #1
 					if(result.success){
 						login.close();
 						Ext.create('Sanjay.view.MyViewPort');
+						Sanjay.util.SessionMonitor.start();
 					}else{
 						Sanjay.util.Util.showErrorMsg(conn.responseText);
 					}

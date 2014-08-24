@@ -33,4 +33,12 @@ public final class LoginController {
 		result.setMsg("logout successful");
 		return result;
 	}
+	@RequestMapping(value="/keepAlive")
+	public LoginResult keppAlive(){
+		logger.info("logout");
+		LoginResult result =  new LoginResult();
+		result.setSuccess(true);
+		result.setMsg("ping successful");
+		return result;
+	}
 }
