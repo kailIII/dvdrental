@@ -21,9 +21,16 @@ public final class LoginController {
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return result;
+	}
+	@RequestMapping(value="/logout")
+	public LoginResult logout(){
+		logger.info("logout");
+		LoginResult result =  new LoginResult();
+		result.setSuccess(true);
+		result.setMsg("logout successful");
 		return result;
 	}
 }

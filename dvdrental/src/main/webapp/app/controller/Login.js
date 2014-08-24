@@ -19,6 +19,9 @@ Ext.define('Sanjay.controller.Login', { // #1
 			},
 			"login form textfield[name=password]":{
 				keypress: this.onTextfieldKeyPress
+			},
+			"appheader button#logout": {
+				click: this.onButtonClickLogout
 			}
 		});
 	},
@@ -102,7 +105,40 @@ Ext.define('Sanjay.controller.Login', { // #1
 	        	ref: 'capslockTooltip', 
 	        	selector: 'capslocktooltip' 
 	        } 
-	      ]
+	      ],
+	onButtonClickLogout: function(button, e, options)  {
+		Ext.Ajax.request({
+			url: 'auth/logout',
+			success: function(conn, response, options, eOpts){
+				var result = Ext.JSON.decode(conn.responseText, true); 
+				if (!result){ 
+					result = {}; 
+					result.success = false; 
+					result.msg = conn.responseText; 
+				}
+				if (result.success) { // #3 
+					button.up('mainviewport').destroy(); // #4 
+					window.location.reload(); // #5 
+				} else { 
+					Ext.Msg.show({ // #6 
+						title:'Error!', 
+						msg: result.msg, 
+						icon: Ext.Msg.ERROR, 
+						buttons: Ext.Msg.OK 
+						}); 
+				}
+				
+			},
+			failure: function(conn, response, options, eOpts){
+				Ext.Msg.show({ // #7 
+					title: 'Error!', 
+					msg: conn.responseText, 
+					icon: Ext.Msg.ERROR, 
+					buttons: Ext.Msg.OK 
+					});
+			}
+		});
+	}    
 
 	
 

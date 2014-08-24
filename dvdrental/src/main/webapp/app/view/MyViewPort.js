@@ -31,6 +31,6 @@ Ext.define(
 								region : 'south',
 								height : 30,
 								style : 'border-top: 1px solid #4c72a4;',
-								html : '<div id="titleHeader"> <center> <span style ="font-size: 10px;"> By Sanjay Singh</span> </center> </div>'
+								html : '<div id="titleHeader"> <center> <span style ="font-size: 10px;">ExtJS 5 with Spring 4 showcase by Sanjay Singh</span> </center> </div>'
 							} ]
 				});
