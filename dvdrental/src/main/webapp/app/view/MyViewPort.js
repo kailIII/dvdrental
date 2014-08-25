@@ -3,7 +3,11 @@ Ext.define(
 				{
 					extend : 'Ext.container.Viewport', // #1
 					alias : 'widget.mainviewport', // #2
-					requires : ['Sanjay.view.Header' // #3
+					requires : [
+					            'Sanjay.view.Header',
+					            'Sanjay.view.MainPanel',
+					            'Sanjay.view.menu.Accordion',
+					            'Sanjay.view.menu.Item'
 					],
 
 					layout : {
@@ -11,18 +15,17 @@ Ext.define(
 					},
 					items : [
 							{
-								xtype : 'container', // #5
+								xtype : 'mainmenu', // #5
 								width : 185,
 								collapsible : true,
 								region : 'west',
-								style : 'background-color: #8FB488;'
 							},
 							{
 								xtype : 'appheader', // #6
 								region : 'north'
 							},
 							{
-								xtype : 'container', // #7
+								xtype : 'mainpanel', // #7
 
 								region : 'center'
 							},

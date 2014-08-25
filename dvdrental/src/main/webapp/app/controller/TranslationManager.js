@@ -17,7 +17,7 @@ Ext.define('Sanjay.controller.TranslationManager', {
 		});
 	},
 	onSplitbuttonBeforeRender : function(abstractcomponent, options) {
-		var lang = localStorage ? (localStorage.getItem(' user-lang') || 'en')
+		var lang = localStorage ? (localStorage.getItem('user-lang') || 'en')
 				: 'en'; // #5 
 		abstractcomponent.iconCls = lang; // #6 
 		if (lang == 'en') { // #7 

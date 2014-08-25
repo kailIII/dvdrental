@@ -56,14 +56,14 @@ Ext.define('Sanjay.view.Login', { // #1
     	                    	        	 xtype: 'button',
     	                    	        	 itemId: 'cancel',
     	                    	        	 iconCls: 'cancel',
-    	                    	        	 text: 'Cancel'
+    	                    	        	 text: translations.cancel
     	                    	          },
     	                    	          {
     	                    	        	  xtype: 'button',
     	                    	        	  itemId: 'submit',
     	                    	        	  formBind: true,
     	                    	        	  iconCls: 'key-go',
-    	                    	        	  text: "Submit"
+    	                    	        	  text: translations.submit
     	                    	          }
     	                    	          ]
     	                    	  
