@@ -10,8 +10,13 @@ Ext.define(
 						{
 							xtype : 'label', // #6
 							html : '<div id ="titleHeader"> DVD Rental Store<span style ="font-size: 12px;"> - by Sanjay Singh </span> </div>'
-						}, {
+						}, 
+						
+						{
 							xtype : 'tbfill' // #7
+						},{
+							xtype: 'translation'  
+							
 						}, {
 							xtype : 'tbseparator' // #8
 

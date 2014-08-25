@@ -4,7 +4,8 @@ Ext.define('Sanjay.controller.Login', { // #1
 	          'Login',
 	          'authentication.CapsLockTooltip',
 	          'Header',
-	          'MyViewPort'
+	          'MyViewPort',
+	          'Translation'
 	],
 	requires:[
 	          'Sanjay.util.Util',

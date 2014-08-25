@@ -37,3 +37,12 @@
 	font-family:' Lucida Grande', Arial, Sans; 
 	}
 
+.pt_BR { 
+	background-image:url('../flags/br.png') !important; 
+	} 
+.en { 
+	background-image:url('../flags/us.png') !important; 
+	} 
+.es { background-image:url('../flags/es.png') !important; 
+	}
+

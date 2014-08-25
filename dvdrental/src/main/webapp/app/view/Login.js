@@ -11,7 +11,7 @@ Ext.define('Sanjay.view.Login', { // #1
 	title : "Login", // #9 
 	closeAction : 'hide', // #10 
 	closable : false, // #11 
-	items: [
+ 	items: [
 	        {
 	        	xtype:'form',
 	        	frame: false,
@@ -28,13 +28,13 @@ Ext.define('Sanjay.view.Login', { // #1
 	        	items: [
 	        	        {
 	        	        	name: 'user',
-	        	        	fieldLabel: "User",
+	        	        	fieldLabel: translations.user,
 	        	        	maxLength: 25
 	        	        },
 	        	        {
 		        	        inputType: 'password',
 		        	        name: 'password',
-		        	        fieldLabel: "Password",
+		        	        fieldLabel: translations.password,
 		        	        enableKeyEvents: true,
 		        	        id: 'password',
 		        	        maxLength: 15
@@ -45,6 +45,9 @@ Ext.define('Sanjay.view.Login', { // #1
     	                    	  xtype: 'toolbar',
     	                    	  dock: 'bottom',
     	                    	  items: [
+    	                    	          {
+    	                    	        	xtype: 'translation'  
+    	                    	          },
     	                    	          {
     	                    	        	  xtype: 'tbfill',
     	                    	        	  
