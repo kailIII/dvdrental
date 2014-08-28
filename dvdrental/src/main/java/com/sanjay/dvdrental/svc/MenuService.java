@@ -1,5 +1,7 @@
 package com.sanjay.dvdrental.svc;
 
+import java.util.LinkedList;
+
 import org.springframework.stereotype.Service;
 
 import com.sanjay.dvdrental.model.Menu;
@@ -7,10 +9,12 @@ import com.sanjay.dvdrental.model.Menu;
 @Service
 public class MenuService {
 	public Menu getMainMenu(String user){
-		Menu root = buildRootMenu();
-		root.getItems().add(childMenu1(root));
-		root.getItems().add(childMenu2(root));
-		return root;
+		Menu main = buildRootMenu();
+		main.setItems(new LinkedList<Menu>());
+		
+		main.getItems().add(childMenu1(main));
+		main.getItems().add(childMenu2(main));
+		return main;
 	}
 	
 	private Menu buildRootMenu(){

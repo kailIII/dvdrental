@@ -1,9 +1,13 @@
 package com.sanjay.dvdrental.web;
 
+import java.util.LinkedList;
+
 import javax.inject.Inject;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import antlr.collections.List;
 
 import com.sanjay.dvdrental.model.Menu;
 import com.sanjay.dvdrental.model.Root;
@@ -20,7 +24,9 @@ public class MenuController {
 		String user="";
 		Menu menu = service.getMainMenu(user);
 		Root root = new Root();
-		root.getItems().add(menu);
+		LinkedList<Menu> sub = new LinkedList<Menu>();
+		sub.add(menu);
+		root.setItems(sub);
 		return root;
 	}
 }

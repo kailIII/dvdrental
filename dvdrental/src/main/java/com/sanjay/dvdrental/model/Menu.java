@@ -11,7 +11,7 @@ public class Menu {
 	String className;
 	boolean leaf=true;
 
-	List<Menu> items=new LinkedList<Menu>();
+	List<Menu> items=null;
 
 	public Integer getId() {
 		return id;
