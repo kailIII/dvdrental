@@ -51,7 +51,7 @@ Ext.define('Sanjay.controller.Menu', {
 		});
 		if (!newTab) { // #4
 			newTab = mainPanel.add({ // #5
-				xtype : record.raw.className, // #6
+				xtype : record.data.className, // #6
 				closable : true, // #7
 				iconCls : record.get('iconCls'), // #8
 				title : record.get('text')	// #9

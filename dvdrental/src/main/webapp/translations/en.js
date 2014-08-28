@@ -9,5 +9,9 @@ translations = {
 	capsLockMsg1 : 'Having Caps Lock on may cause you to enter your password',
 	capsLockMsg2 : 'incorrectly.',
 	capsLockMsg3 : 'You should press Caps Lock to turn it off before entering',
-	capsLockMsg4 : 'your password.'
+	capsLockMsg4 : 'your password.',
+	menu1 : "Security",
+	menu11: "Groups and Permissions",
+	menu12: "Users"
+	
 }
