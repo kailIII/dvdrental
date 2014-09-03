@@ -14,6 +14,7 @@ public class MenuService {
 		
 		main.getItems().add(childMenu1(main));
 		main.getItems().add(childMenu2(main));
+		main.getItems().add(childMenu3(main));	
 		return main;
 	}
 	
@@ -27,6 +28,18 @@ public class MenuService {
 		menu.setLeaf(false);
 		return menu;
 	}
+
+	
+	private Menu childMenu1(Menu parent){
+		Menu menu = new Menu();
+		menu.setId(new Integer(2));
+		menu.setText("menu11");
+		menu.setIconCls("menu_groups");
+		menu.setParent_id(parent.getId());
+		menu.setClassName("panel");
+		menu.setLeaf(true);
+		return menu;
+	}
 	private Menu childMenu2(Menu parent){
 		Menu menu = new Menu();
 		menu.setId(new Integer(3));
@@ -37,12 +50,11 @@ public class MenuService {
 		menu.setLeaf(true);
 		return menu;
 	}
-	
-	private Menu childMenu1(Menu parent){
+	private Menu childMenu3(Menu parent){
 		Menu menu = new Menu();
-		menu.setId(new Integer(2));
-		menu.setText("menu11");
-		menu.setIconCls("menu_groups");
+		menu.setId(new Integer(4));
+		menu.setText("menu13");
+		menu.setIconCls("menu_profile");
 		menu.setParent_id(parent.getId());
 		menu.setClassName("panel");
 		menu.setLeaf(true);

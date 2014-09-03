@@ -5,7 +5,7 @@ Ext.define('Sanjay.view.menu.Accordion', {
 	layout : {
 		type : 'accordion'
 	},
-	collapsible : false,
+	collapsible : true,
 	hideCollapseTool : false,
 	iconCls : 'sitemap',
 	title : 'Menu'

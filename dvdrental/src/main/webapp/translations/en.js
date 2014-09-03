@@ -12,6 +12,7 @@ translations = {
 	capsLockMsg4 : 'your password.',
 	menu1 : "Security",
 	menu11: "Groups and Permissions",
-	menu12: "Users"
+	menu12: "Users",
+	menu13: "Profile"	
 	
 }

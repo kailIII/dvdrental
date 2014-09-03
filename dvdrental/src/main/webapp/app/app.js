@@ -38,7 +38,8 @@ Ext.application({
 	controllers: [
 		'Login',
 		'TranslationManager',
-		'Menu'
+		'Menu',
+		'Users'
 	],
     splashscreen: {}
 });

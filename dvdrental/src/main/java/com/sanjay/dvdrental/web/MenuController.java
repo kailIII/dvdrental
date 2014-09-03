@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import antlr.collections.List;
 
 import com.sanjay.dvdrental.model.Menu;
-import com.sanjay.dvdrental.model.Root;
 import com.sanjay.dvdrental.svc.MenuService;
 
 
@@ -20,10 +19,10 @@ public class MenuController {
 	MenuService service;
 	
 	@RequestMapping(value="menu/main")
-	public Root mainMenu(){
+	public MenuResult mainMenu(){
 		String user="";
 		Menu menu = service.getMainMenu(user);
-		Root root = new Root();
+		MenuResult root = new MenuResult();
 		LinkedList<Menu> sub = new LinkedList<Menu>();
 		sub.add(menu);
 		root.setItems(sub);

@@ -1,9 +1,11 @@
-package com.sanjay.dvdrental.model;
+package com.sanjay.dvdrental.web;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Root {
+import com.sanjay.dvdrental.model.Menu;
+
+public class MenuResult {
 	List<Menu> items = new LinkedList<Menu>();
 
 	public List<Menu> getItems() {
