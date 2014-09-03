@@ -14,6 +14,7 @@ Ext.define('Sanjay.controller.Users', {
 	},
 
 	onRender : function(component, options) {
+		Ext.create('Sanjay.store.security.Groups').load();
 		component.getStore().load();
 	}
 });

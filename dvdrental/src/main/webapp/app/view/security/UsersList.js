@@ -5,11 +5,10 @@ Ext.define('Sanjay.view.security.UsersList', {
 	requires : [ 'Sanjay.store.security.Users' ],
 
 	store : Ext.create('Sanjay.store.security.Users'),
-	
 	columns : [ {
 		width : 150,
 		dataIndex : 'userName',
-		text : 'Username'
+		text : 'User name'
 	}, {
 		width : 200,
 		dataIndex : 'name',
