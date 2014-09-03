@@ -46,7 +46,7 @@ public class MenuService {
 		menu.setText("menu12");
 		menu.setIconCls("menu_users");
 		menu.setParent_id(parent.getId());
-		menu.setClassName("panel");
+		menu.setClassName("users");
 		menu.setLeaf(true);
 		return menu;
 	}

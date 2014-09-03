@@ -4,9 +4,7 @@ Ext.define('Sanjay.controller.Users', {
 	          'Sanjay.store.security.Users',
 	          'Sanjay.store.security.Groups'
 	          ],
-	stores : [ 'security.Users', 'security.Groups' ],
-	models : [ 'security.User', 'security.Group' ],
-	views : [ 'security.Users','security.UsersList' ],
+	views : [ 'security.Users'],
 	init : function(application) {
 		this.control({
 			"userslist" : {
