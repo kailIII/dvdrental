@@ -22,13 +22,12 @@ Ext.define('Sanjay.view.security.UsersList', {
 	}, {
 		width : 150,
 		dataIndex : 'Group_id',
-		text : 'Group'
-		/*	,
+		text : 'Group',
 		renderer : function(value, metaData, record) {
 			var groupsStore = Ext.getStore('groups');
 			var group = groupsStore.findRecord('id', value);
 			return group != null ? group.get('name') : value;
-		} */
+		}
 	} ]
 
 });
